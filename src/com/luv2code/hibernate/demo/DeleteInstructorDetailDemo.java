@@ -41,7 +41,7 @@ public class DeleteInstructorDetailDemo {
 			session.delete(tempInstructorDetail);
 			
 			//remove the associated object reference
-			//break bi-directional link
+			//break bi-directional link. if it is not done hibernate launches an exception
 			tempInstructorDetail.getInstructor().setInstructorDetail(null);
 
 			//delete instructor detail
